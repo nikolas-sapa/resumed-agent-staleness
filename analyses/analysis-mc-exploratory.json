@@ -1,0 +1,23 @@
+{
+ "status": "post-hoc, exploratory; corrected per hostile review; NOT confirmatory",
+ "adherence_corrected": {
+  "structured_format_present": "90/96",
+  "NOTE_sentence_present": "51/96",
+  "lacking_per_fact_markers": "6/96",
+  "placeholder_boilerplate": [
+   "status-report-101",
+   "quota-flag-102"
+  ]
+ },
+ "degenerate_compactions": {
+  "changed-S-mc/key-rotation-107": "compaction refusal, zero facts, scored as agent win - EXCLUDED from M2 sensitivity",
+  "changed-S-mc/key-rotation-103": "compaction failure, miscounted as nonresponder",
+  "refusal_rate": "2/8 key-rotation compactions (credential echo), absent in all other arms"
+ },
+ "M2_sensitivity": {
+  "all_S_mc": "10.53pp [-1.04, 27.96]",
+  "excluding_refusal": "9.57pp [-1.04, 26.09]"
+ },
+ "compliance_gradient": "WITHDRAWN - recoded structured-format-present reduction 10.00pp ~= unselected 10.53pp; no dose-response; within-family evidence contradicts gradient",
+ "reviewer_verification": "0/384 verdict mismatches; bootstrap seed-stable; token overhead 1.134 confirmed"
+}

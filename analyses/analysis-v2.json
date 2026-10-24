@@ -1,0 +1,133 @@
+{
+ "spec": "SPEC-v2-frozen-2026-10-07.md",
+ "model": "deepseek-v4-flash (VyceAI)",
+ "cell_rates": {
+  "changed-A": {
+   "n": 96,
+   "nonresponders": 0,
+   "stale": 25,
+   "stale_rate": 0.2604166666666667,
+   "success": 66,
+   "success_rate": 0.6875,
+   "mean_tokens_per_run": 2167.7
+  },
+  "changed-B": {
+   "n": 95,
+   "nonresponders": 1,
+   "stale": 12,
+   "stale_rate": 0.1276595744680851,
+   "success": 76,
+   "success_rate": 0.8,
+   "mean_tokens_per_run": 2459.0
+  },
+  "changed-C": {
+   "n": 96,
+   "nonresponders": 1,
+   "stale": 10,
+   "stale_rate": 0.10526315789473684,
+   "success": 79,
+   "success_rate": 0.8229166666666666,
+   "mean_tokens_per_run": 2674.4
+  },
+  "changed-H": {
+   "n": 96,
+   "nonresponders": 0,
+   "stale": 11,
+   "stale_rate": 0.11458333333333333,
+   "success": 75,
+   "success_rate": 0.78125,
+   "mean_tokens_per_run": 2457.5
+  },
+  "unchanged-A": {
+   "n": 96,
+   "nonresponders": 1,
+   "stale": 0,
+   "stale_rate": 0.0,
+   "success": 91,
+   "success_rate": 0.9479166666666666,
+   "mean_tokens_per_run": 1863.4
+  },
+  "unchanged-B": {
+   "n": 96,
+   "nonresponders": 1,
+   "stale": 0,
+   "stale_rate": 0.0,
+   "success": 88,
+   "success_rate": 0.9166666666666666,
+   "mean_tokens_per_run": 2261.4
+  }
+ },
+ "nonresponse_guard_triggered": false,
+ "V2b_primary": {
+  "c1": "changed-B",
+  "c2": "changed-A",
+  "n_pairs": 94,
+  "excluded_nonresponder_pairs": 1,
+  "rate_c1": 0.1277,
+  "rate_c2": 0.2553,
+  "point_gap_pp": -12.77,
+  "ci95_pp": [
+   -26.09,
+   -2.08
+  ],
+  "reduction_pp": 12.77,
+  "reduction_ci95_pp": [
+   2.08,
+   26.09
+  ],
+  "token_ratio_B_over_A": 1.134,
+  "success_rates": {
+   "A": 0.6875,
+   "B": 0.8
+  },
+  "success_drop_pp": -11.25,
+  "verdict": "qualifies-for-confirmation-planning"
+ },
+ "V2c_instruction_vs_provenance": {
+  "c1": "changed-C",
+  "c2": "changed-B",
+  "n_pairs": 93,
+  "excluded_nonresponder_pairs": 2,
+  "rate_c1": 0.1075,
+  "rate_c2": 0.1183,
+  "point_gap_pp": -1.08,
+  "ci95_pp": [
+   -3.33,
+   0.0
+  ]
+ },
+ "V2d_hint_vs_provenance": {
+  "c1": "changed-H",
+  "c2": "changed-B",
+  "n_pairs": 94,
+  "excluded_nonresponder_pairs": 1,
+  "rate_c1": 0.117,
+  "rate_c2": 0.1277,
+  "point_gap_pp": -1.06,
+  "ci95_pp": [
+   -3.26,
+   0.0
+  ]
+ },
+ "family_breakdown_changed_A": {
+  "contact-update": "8/8",
+  "deprecated-endpoint": "7/8",
+  "key-rotation": "7/8",
+  "quota-flag": "2/8",
+  "policy-value": "1/8",
+  "assignee-addition": "0/8",
+  "deadline-shift": "0/8",
+  "owner-reassign": "0/8",
+  "price-file": "0/8",
+  "room-booking": "0/8",
+  "status-report": "0/8",
+  "stock-reorder": "0/8"
+ },
+ "infra_excluded": [
+  {
+   "cell": "changed-B",
+   "task_id": "price-file-002"
+  }
+ ],
+ "verdict": "qualifies-for-confirmation-planning"
+}

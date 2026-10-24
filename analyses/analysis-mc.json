@@ -1,0 +1,87 @@
+{
+ "spec": "SPEC-MC-INVESTIGATION-frozen-2026-10-07.md",
+ "cell_rates": {
+  "changed-A-mc": {
+   "n": 96,
+   "nonresponders": 0,
+   "stale": 21,
+   "stale_rate": 0.21875,
+   "success": 72,
+   "success_rate": 0.75,
+   "mean_tokens_per_run": 2085.3
+  },
+  "changed-B-mc": {
+   "n": 96,
+   "nonresponders": 0,
+   "stale": 21,
+   "stale_rate": 0.21875,
+   "success": 70,
+   "success_rate": 0.7291666666666666,
+   "mean_tokens_per_run": 2193.3
+  },
+  "changed-S-mc": {
+   "n": 96,
+   "nonresponders": 1,
+   "stale": 10,
+   "stale_rate": 0.10526315789473684,
+   "success": 77,
+   "success_rate": 0.8020833333333334,
+   "mean_tokens_per_run": 2286.9
+  },
+  "changed-A-app": {
+   "n": 96,
+   "nonresponders": 0,
+   "stale": 21,
+   "stale_rate": 0.21875,
+   "success": 67,
+   "success_rate": 0.6979166666666666,
+   "mean_tokens_per_run": 2364.8
+  }
+ },
+ "adherence": {
+  "changed-S-mc": "header+marker: 51/96",
+  "changed-A-app": "header: 96/96",
+  "changed-A-mc": "clean: 96/96"
+ },
+ "M1_power": {
+  "c1": "changed-B-mc",
+  "c2": "changed-A-mc",
+  "n_pairs": 96,
+  "excluded": 0,
+  "rate_c1": 0.2188,
+  "rate_c2": 0.2188,
+  "reduction_pp": -0.0,
+  "reduction_ci95_pp": [
+   -3.12,
+   3.12
+  ]
+ },
+ "M2_structure": {
+  "c1": "changed-S-mc",
+  "c2": "changed-A-mc",
+  "n_pairs": 95,
+  "excluded": 1,
+  "rate_c1": 0.1053,
+  "rate_c2": 0.2105,
+  "reduction_pp": 10.53,
+  "reduction_ci95_pp": [
+   -1.04,
+   27.96
+  ]
+ },
+ "M3_header": {
+  "c1": "changed-A-app",
+  "c2": "changed-A-mc",
+  "n_pairs": 96,
+  "excluded": 0,
+  "rate_c1": 0.2188,
+  "rate_c2": 0.2188,
+  "reduction_pp": -0.0,
+  "reduction_ci95_pp": [
+   -3.12,
+   3.12
+  ]
+ },
+ "app_header_token_overhead_ratio": 1.134,
+ "infra_excluded": []
+}

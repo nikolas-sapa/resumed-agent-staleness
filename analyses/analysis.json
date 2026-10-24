@@ -1,0 +1,229 @@
+{
+ "frozen_spec": "SPEC-frozen-2026-10-06.md",
+ "model": "deepseek-v4-flash (relay-vyceai)",
+ "cell_rates": {
+  "changed-A": {
+   "n": 73,
+   "stale": 39,
+   "stale_rate": 0.5342465753424658,
+   "success": 37,
+   "success_rate": 0.5068493150684932,
+   "nonresponse": 0,
+   "mean_tokens_per_run": 2607.8,
+   "mean_calls_per_run": 3.92,
+   "reverified_rate": 1.0
+  },
+  "changed-B": {
+   "n": 75,
+   "stale": 28,
+   "stale_rate": 0.37333333333333335,
+   "success": 45,
+   "success_rate": 0.6,
+   "nonresponse": 2,
+   "mean_tokens_per_run": 3690.5,
+   "mean_calls_per_run": 4.79,
+   "reverified_rate": 0.9866666666666667
+  },
+  "changed-C": {
+   "n": 75,
+   "stale": 27,
+   "stale_rate": 0.36,
+   "success": 43,
+   "success_rate": 0.5733333333333334,
+   "nonresponse": 9,
+   "mean_tokens_per_run": 4440.4,
+   "mean_calls_per_run": 5.72,
+   "reverified_rate": 1.0
+  },
+  "unchanged-A": {
+   "n": 75,
+   "stale": 0,
+   "stale_rate": 0.0,
+   "success": 9,
+   "success_rate": 0.12,
+   "nonresponse": 1,
+   "mean_tokens_per_run": 2445.0,
+   "mean_calls_per_run": 3.69,
+   "reverified_rate": 1.0
+  },
+  "unchanged-B": {
+   "n": 72,
+   "stale": 0,
+   "stale_rate": 0.0,
+   "success": 5,
+   "success_rate": 0.06944444444444445,
+   "nonresponse": 7,
+   "mean_tokens_per_run": 3886.8,
+   "mean_calls_per_run": 4.94,
+   "reverified_rate": 1.0
+  }
+ },
+ "P1_phenomenon": {
+  "c1": "changed-A",
+  "c2": "unchanged-A",
+  "stat": "stale_use",
+  "n_pairs": 73,
+  "rate_c1": 0.5342465753424658,
+  "rate_c2": 0.0,
+  "point_gap_pp": 53.42,
+  "ci95_pp": [
+   42.47,
+   64.38
+  ],
+  "excluded_pairs": 2,
+  "verdict": "promising",
+  "rule": "killed if point<3pp or CIupper<5pp; promising if CIlower>5pp; else inconclusive",
+  "success_rates": {
+   "changed-A": 0.5068493150684932,
+   "unchanged-A": 0.12
+  }
+ },
+ "P2_intervention": {
+  "c1": "changed-A",
+  "c2": "changed-B",
+  "stat": "stale_use",
+  "n_pairs": 73,
+  "rate_c1": 0.5342465753424658,
+  "rate_c2": 0.3561643835616438,
+  "point_gap_pp": 17.81,
+  "ci95_pp": [
+   5.48,
+   30.14
+  ],
+  "excluded_pairs": 2,
+  "verdict": "narrowed",
+  "token_ratio_B_over_A": 1.415,
+  "success_drop_pp": -9.32,
+  "rule": "qualify if >=10pp and ratio<=1.2 and success drop <=3pp; narrowed if 5-10pp; killed if <5pp"
+ },
+ "C_descriptive": {
+  "changed-C": {
+   "n": 75,
+   "stale": 27,
+   "stale_rate": 0.36,
+   "success": 43,
+   "success_rate": 0.5733333333333334,
+   "nonresponse": 9,
+   "mean_tokens_per_run": 4440.4,
+   "mean_calls_per_run": 5.72,
+   "reverified_rate": 1.0
+  }
+ },
+ "family_table_A_changed_vs_B": [
+  {
+   "family": "assignee-addition",
+   "changed-A_n": 6,
+   "changed-A_stale": 5,
+   "changed-B_n": 6,
+   "changed-B_stale": 2
+  },
+  {
+   "family": "contact-update",
+   "changed-A_n": 7,
+   "changed-A_stale": 7,
+   "changed-B_n": 7,
+   "changed-B_stale": 7
+  },
+  {
+   "family": "deadline-shift",
+   "changed-A_n": 6,
+   "changed-A_stale": 0,
+   "changed-B_n": 6,
+   "changed-B_stale": 0
+  },
+  {
+   "family": "deprecated-endpoint",
+   "changed-A_n": 6,
+   "changed-A_stale": 5,
+   "changed-B_n": 6,
+   "changed-B_stale": 1
+  },
+  {
+   "family": "key-rotation",
+   "changed-A_n": 5,
+   "changed-A_stale": 5,
+   "changed-B_n": 5,
+   "changed-B_stale": 5
+  },
+  {
+   "family": "owner-reassign",
+   "changed-A_n": 6,
+   "changed-A_stale": 1,
+   "changed-B_n": 6,
+   "changed-B_stale": 0
+  },
+  {
+   "family": "policy-value",
+   "changed-A_n": 6,
+   "changed-A_stale": 0,
+   "changed-B_n": 6,
+   "changed-B_stale": 1
+  },
+  {
+   "family": "price-file",
+   "changed-A_n": 7,
+   "changed-A_stale": 5,
+   "changed-B_n": 7,
+   "changed-B_stale": 4
+  },
+  {
+   "family": "quota-flag",
+   "changed-A_n": 6,
+   "changed-A_stale": 0,
+   "changed-B_n": 6,
+   "changed-B_stale": 3
+  },
+  {
+   "family": "room-booking",
+   "changed-A_n": 6,
+   "changed-A_stale": 3,
+   "changed-B_n": 6,
+   "changed-B_stale": 1
+  },
+  {
+   "family": "status-report",
+   "changed-A_n": 7,
+   "changed-A_stale": 3,
+   "changed-B_n": 7,
+   "changed-B_stale": 0
+  },
+  {
+   "family": "stock-reorder",
+   "changed-A_n": 5,
+   "changed-A_stale": 5,
+   "changed-B_n": 5,
+   "changed-B_stale": 2
+  }
+ ],
+ "infra_excluded": [
+  {
+   "cell": "changed-A",
+   "task_id": "key-rotation-004",
+   "error": "http_504: {\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-504/\",\"title\":\"Error 504: Gateway time-out\",\"status\":504,\"detail\":\"The origin web server did not respond to Cloudflare within the allowed time. This typically means the origin is overload"
+  },
+  {
+   "cell": "changed-A",
+   "task_id": "stock-reorder-002",
+   "error": "http_504: {\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-504/\",\"title\":\"Error 504: Gateway time-out\",\"status\":504,\"detail\":\"The origin web server did not respond to Cloudflare within the allowed time. This typically means the origin is overload"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "assignee-addition-001",
+   "error": "http_504: {\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-504/\",\"title\":\"Error 504: Gateway time-out\",\"status\":504,\"detail\":\"The origin web server did not respond to Cloudflare within the allowed time. This typically means the origin is overload"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "policy-value-004",
+   "error": "http_504: {\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-504/\",\"title\":\"Error 504: Gateway time-out\",\"status\":504,\"detail\":\"The origin web server did not respond to Cloudflare within the allowed time. This typically means the origin is overload"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "price-file-002",
+   "error": "http_504: {\"type\":\"https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-504/\",\"title\":\"Error 504: Gateway time-out\",\"status\":504,\"detail\":\"The origin web server did not respond to Cloudflare within the allowed time. This typically means the origin is overload"
+  }
+ ],
+ "verdicts": {
+  "P1": "promising",
+  "P2": "narrowed"
+ }
+}

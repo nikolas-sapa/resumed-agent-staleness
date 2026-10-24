@@ -1,0 +1,577 @@
+{
+ "spec": "SPEC-CONFIRMATION-frozen-2026-10-07.md",
+ "cell_rates": {
+  "changed-A": {
+   "n": 188,
+   "nonresponders": 1,
+   "stale": 48,
+   "stale_rate": 0.25668449197860965,
+   "success": 136,
+   "success_rate": 0.723404255319149,
+   "mean_tokens_per_run": 2032.3
+  },
+  "changed-B": {
+   "n": 183,
+   "nonresponders": 0,
+   "stale": 20,
+   "stale_rate": 0.1092896174863388,
+   "success": 151,
+   "success_rate": 0.825136612021858,
+   "mean_tokens_per_run": 2319.3
+  },
+  "changed-L": {
+   "n": 186,
+   "nonresponders": 0,
+   "stale": 42,
+   "stale_rate": 0.22580645161290322,
+   "success": 135,
+   "success_rate": 0.7258064516129032,
+   "mean_tokens_per_run": 2282.5
+  },
+  "unchanged-A": {
+   "n": 178,
+   "nonresponders": 3,
+   "stale": 0,
+   "stale_rate": 0.0,
+   "success": 165,
+   "success_rate": 0.9269662921348315,
+   "mean_tokens_per_run": 1831.5
+  },
+  "unchanged-B": {
+   "n": 167,
+   "nonresponders": 2,
+   "stale": 0,
+   "stale_rate": 0.0,
+   "success": 155,
+   "success_rate": 0.9281437125748503,
+   "mean_tokens_per_run": 2180.8
+  },
+  "changed-A-mc": {
+   "n": 37,
+   "nonresponders": 0,
+   "stale": 7,
+   "stale_rate": 0.1891891891891892,
+   "success": 29,
+   "success_rate": 0.7837837837837838,
+   "mean_tokens_per_run": 1935.1
+  },
+  "changed-B-mc": {
+   "n": 41,
+   "nonresponders": 0,
+   "stale": 10,
+   "stale_rate": 0.24390243902439024,
+   "success": 29,
+   "success_rate": 0.7073170731707317,
+   "mean_tokens_per_run": 2164.3
+  },
+  "changed-A-s": {
+   "n": 38,
+   "nonresponders": 1,
+   "stale": 6,
+   "stale_rate": 0.16216216216216217,
+   "success": 25,
+   "success_rate": 0.6578947368421053,
+   "mean_tokens_per_run": 2640.5
+  },
+  "changed-B-s": {
+   "n": 42,
+   "nonresponders": 1,
+   "stale": 3,
+   "stale_rate": 0.07317073170731707,
+   "success": 36,
+   "success_rate": 0.8571428571428571,
+   "mean_tokens_per_run": 2943.9
+  }
+ },
+ "primary": {
+  "c1": "changed-B",
+  "c2": "changed-A",
+  "n_pairs": 178,
+  "excluded_nonresponder_pairs": 1,
+  "rate_c1": 0.1067,
+  "rate_c2": 0.2416,
+  "reduction_pp": 13.48,
+  "reduction_ci95_pp": [
+   1.09,
+   31.25
+  ],
+  "token_ratio_B_over_A": 1.141,
+  "success_rates": {
+   "A": 0.723404255319149,
+   "B": 0.825136612021858
+  },
+  "success_drop_pp": -10.17,
+  "verdict": "confirmed"
+ },
+ "stratum_replication": {
+  "per_family": {
+   "price-file": {
+    "reduction_pp": 6.67,
+    "n_pairs": 15
+   },
+   "stock-reorder": {
+    "reduction_pp": 0.0,
+    "n_pairs": 16
+   },
+   "assignee-addition": {
+    "reduction_pp": 0.0,
+    "n_pairs": 16
+   },
+   "key-rotation": {
+    "reduction_pp": 73.33,
+    "n_pairs": 15
+   },
+   "quota-flag": {
+    "reduction_pp": 0.0,
+    "n_pairs": 13
+   },
+   "status-report": {
+    "reduction_pp": 0.0,
+    "n_pairs": 15
+   },
+   "policy-value": {
+    "reduction_pp": 13.33,
+    "n_pairs": 15
+   },
+   "deadline-shift": {
+    "reduction_pp": 0.0,
+    "n_pairs": 15
+   },
+   "contact-update": {
+    "reduction_pp": 0.0,
+    "n_pairs": 14
+   },
+   "deprecated-endpoint": {
+    "reduction_pp": 83.33,
+    "n_pairs": 12
+   },
+   "room-booking": {
+    "reduction_pp": 0.0,
+    "n_pairs": 16
+   },
+   "owner-reassign": {
+    "reduction_pp": 0.0,
+    "n_pairs": 16
+   }
+  },
+  "required_families_pass": true
+ },
+ "length_control": {
+  "c1": "changed-L",
+  "c2": "changed-A",
+  "n_pairs": 181,
+  "excluded_nonresponder_pairs": 1,
+  "rate_c1": 0.221,
+  "rate_c2": 0.2541,
+  "reduction_pp": 3.31,
+  "reduction_ci95_pp": [
+   -2.22,
+   9.14
+  ],
+  "length_confound_flag": false,
+  "rescope_rule": "if L reduction >= B reduction - 5pp, claim re-scopes to 'additional summary content, regardless of meaning'"
+ },
+ "model_compacted": {
+  "c1": "changed-B-mc",
+  "c2": "changed-A-mc",
+  "n_pairs": 32,
+  "excluded_nonresponder_pairs": 0,
+  "rate_c1": 0.2188,
+  "rate_c2": 0.2188,
+  "reduction_pp": -0.0,
+  "reduction_ci95_pp": [
+   -8.57,
+   9.68
+  ],
+  "generalizes": false
+ },
+ "sonnet_family": {
+  "c1": "changed-B-s",
+  "c2": "changed-A-s",
+  "n_pairs": 32,
+  "excluded_nonresponder_pairs": 2,
+  "rate_c1": 0.0625,
+  "rate_c2": 0.0938,
+  "reduction_pp": 3.12,
+  "reduction_ci95_pp": [
+   -0.0,
+   10.71
+  ],
+  "generalizes": false
+ },
+ "instrument_controls": {
+  "unchanged_stale_zero": true,
+  "nonresponse_guard": true
+ },
+ "infra_excluded": [
+  {
+   "cell": "changed-A",
+   "task_id": "key-rotation-109"
+  },
+  {
+   "cell": "changed-A",
+   "task_id": "policy-value-115"
+  },
+  {
+   "cell": "changed-A",
+   "task_id": "quota-flag-107"
+  },
+  {
+   "cell": "changed-A",
+   "task_id": "quota-flag-109"
+  },
+  {
+   "cell": "changed-B",
+   "task_id": "contact-update-102"
+  },
+  {
+   "cell": "changed-B",
+   "task_id": "contact-update-108"
+  },
+  {
+   "cell": "changed-B",
+   "task_id": "deadline-shift-101"
+  },
+  {
+   "cell": "changed-B",
+   "task_id": "deprecated-endpoint-101"
+  },
+  {
+   "cell": "changed-B",
+   "task_id": "deprecated-endpoint-106"
+  },
+  {
+   "cell": "changed-B",
+   "task_id": "deprecated-endpoint-111"
+  },
+  {
+   "cell": "changed-B",
+   "task_id": "price-file-112"
+  },
+  {
+   "cell": "changed-B",
+   "task_id": "quota-flag-104"
+  },
+  {
+   "cell": "changed-B",
+   "task_id": "status-report-113"
+  },
+  {
+   "cell": "changed-L",
+   "task_id": "assignee-addition-108"
+  },
+  {
+   "cell": "changed-L",
+   "task_id": "contact-update-104"
+  },
+  {
+   "cell": "changed-L",
+   "task_id": "deadline-shift-107"
+  },
+  {
+   "cell": "changed-L",
+   "task_id": "deprecated-endpoint-111"
+  },
+  {
+   "cell": "changed-L",
+   "task_id": "quota-flag-100"
+  },
+  {
+   "cell": "changed-L",
+   "task_id": "status-report-103"
+  },
+  {
+   "cell": "unchanged-A",
+   "task_id": "assignee-addition-103"
+  },
+  {
+   "cell": "unchanged-A",
+   "task_id": "deadline-shift-101"
+  },
+  {
+   "cell": "unchanged-A",
+   "task_id": "deadline-shift-108"
+  },
+  {
+   "cell": "unchanged-A",
+   "task_id": "key-rotation-110"
+  },
+  {
+   "cell": "unchanged-A",
+   "task_id": "owner-reassign-102"
+  },
+  {
+   "cell": "unchanged-A",
+   "task_id": "owner-reassign-109"
+  },
+  {
+   "cell": "unchanged-A",
+   "task_id": "policy-value-102"
+  },
+  {
+   "cell": "unchanged-A",
+   "task_id": "policy-value-112"
+  },
+  {
+   "cell": "unchanged-A",
+   "task_id": "price-file-107"
+  },
+  {
+   "cell": "unchanged-A",
+   "task_id": "room-booking-102"
+  },
+  {
+   "cell": "unchanged-A",
+   "task_id": "room-booking-107"
+  },
+  {
+   "cell": "unchanged-A",
+   "task_id": "room-booking-115"
+  },
+  {
+   "cell": "unchanged-A",
+   "task_id": "status-report-104"
+  },
+  {
+   "cell": "unchanged-A",
+   "task_id": "status-report-109"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "assignee-addition-104"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "assignee-addition-108"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "assignee-addition-110"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "assignee-addition-115"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "contact-update-101"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "deadline-shift-103"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "deadline-shift-107"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "deprecated-endpoint-105"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "deprecated-endpoint-110"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "deprecated-endpoint-114"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "key-rotation-100"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "key-rotation-106"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "key-rotation-115"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "owner-reassign-107"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "owner-reassign-113"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "policy-value-109"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "policy-value-115"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "price-file-110"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "price-file-112"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "quota-flag-100"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "quota-flag-101"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "room-booking-113"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "room-booking-114"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "status-report-105"
+  },
+  {
+   "cell": "unchanged-B",
+   "task_id": "stock-reorder-103"
+  },
+  {
+   "cell": "changed-A-mc",
+   "task_id": "assignee-addition-102"
+  },
+  {
+   "cell": "changed-A-mc",
+   "task_id": "contact-update-102"
+  },
+  {
+   "cell": "changed-A-mc",
+   "task_id": "contact-update-103"
+  },
+  {
+   "cell": "changed-A-mc",
+   "task_id": "deadline-shift-100"
+  },
+  {
+   "cell": "changed-A-mc",
+   "task_id": "key-rotation-100"
+  },
+  {
+   "cell": "changed-A-mc",
+   "task_id": "price-file-102"
+  },
+  {
+   "cell": "changed-A-mc",
+   "task_id": "price-file-103"
+  },
+  {
+   "cell": "changed-A-mc",
+   "task_id": "room-booking-100"
+  },
+  {
+   "cell": "changed-A-mc",
+   "task_id": "room-booking-101"
+  },
+  {
+   "cell": "changed-A-mc",
+   "task_id": "status-report-103"
+  },
+  {
+   "cell": "changed-A-mc",
+   "task_id": "stock-reorder-103"
+  },
+  {
+   "cell": "changed-B-mc",
+   "task_id": "assignee-addition-103"
+  },
+  {
+   "cell": "changed-B-mc",
+   "task_id": "deprecated-endpoint-103"
+  },
+  {
+   "cell": "changed-B-mc",
+   "task_id": "policy-value-100"
+  },
+  {
+   "cell": "changed-B-mc",
+   "task_id": "price-file-102"
+  },
+  {
+   "cell": "changed-B-mc",
+   "task_id": "quota-flag-100"
+  },
+  {
+   "cell": "changed-B-mc",
+   "task_id": "quota-flag-103"
+  },
+  {
+   "cell": "changed-B-mc",
+   "task_id": "room-booking-100"
+  },
+  {
+   "cell": "changed-A-s",
+   "task_id": "deadline-shift-102"
+  },
+  {
+   "cell": "changed-A-s",
+   "task_id": "deadline-shift-103"
+  },
+  {
+   "cell": "changed-A-s",
+   "task_id": "deprecated-endpoint-102"
+  },
+  {
+   "cell": "changed-A-s",
+   "task_id": "key-rotation-102"
+  },
+  {
+   "cell": "changed-A-s",
+   "task_id": "key-rotation-103"
+  },
+  {
+   "cell": "changed-A-s",
+   "task_id": "owner-reassign-100"
+  },
+  {
+   "cell": "changed-A-s",
+   "task_id": "owner-reassign-101"
+  },
+  {
+   "cell": "changed-A-s",
+   "task_id": "owner-reassign-103"
+  },
+  {
+   "cell": "changed-A-s",
+   "task_id": "quota-flag-103"
+  },
+  {
+   "cell": "changed-A-s",
+   "task_id": "room-booking-103"
+  },
+  {
+   "cell": "changed-B-s",
+   "task_id": "contact-update-102"
+  },
+  {
+   "cell": "changed-B-s",
+   "task_id": "deprecated-endpoint-101"
+  },
+  {
+   "cell": "changed-B-s",
+   "task_id": "deprecated-endpoint-102"
+  },
+  {
+   "cell": "changed-B-s",
+   "task_id": "key-rotation-102"
+  },
+  {
+   "cell": "changed-B-s",
+   "task_id": "quota-flag-101"
+  },
+  {
+   "cell": "changed-B-s",
+   "task_id": "room-booking-100"
+  }
+ ],
+ "verdict": "confirmed"
+}

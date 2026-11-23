@@ -51,6 +51,21 @@ python3 -m harness.analyze_conf       # frozen analysis
 Requires Python 3.12+ and any Anthropic-compatible API endpoint (the endpoint/key are read from
 the operator's own configuration — see `harness/episode.py::load_api`).
 
+### Check the reported analyses without any API calls
+
+```bash
+gh release download v1.0 -R nikolas-sapa/resumed-agent-staleness -p '*.tar.gz'
+python3 scripts/reproduce_analyses.py resumed-agent-staleness-bundle.tar.gz
+```
+
+Re-runs the frozen analysis scripts on the 2,631 raw transcripts in the bundle (a few seconds,
+stdlib only) and compares the output to `analyses/*.json`; exits non-zero on any difference.
+`analysis.json`, `analysis-v2.json` and `analysis-mc.json` reproduce exactly. For
+`analysis-conf.json` the mc arms are excluded from the comparison because the MC investigation
+later extended them in place to n=96 (see its pre-registration); the script instead checks that
+the recomputed model-compacted pair equals `analysis-mc.json` M1. `analysis-mc-exploratory.json`
+has no generating script in the bundle and is not recomputed.
+
 ## Integrity
 
 Three pre-registrations frozen before any paid batch. Separate-context hostile reviews re-scored
